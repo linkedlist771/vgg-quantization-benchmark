@@ -102,4 +102,4 @@ if test_eight_bit:
             correct += (predicted == labels).sum().item()
 
     print('Accuracy of the network on the 10000 test images: %d %%' % (100 * correct / total))
-    print('Time taken:', time.time() - start_time)
+    print(f'Time taken:{time.time() - start_time} s', )

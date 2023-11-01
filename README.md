@@ -21,3 +21,19 @@ his method is too complicated.)~~
 ```bash
   python main.py
 ```
+
+- Float Version  :
+  - 520M
+  - 32bit
+  - runing at RTX3070Ti
+> Time cost on the float model: 41.86415243148804  s
+
+> Accuracy of the float model on the 10000 CIFAR-10 test images: 93.48%
+
+- Quant Verison :
+  - 170M
+  - 8bit
+  - runing at i9-12900H
+> Accuracy of the network on the 10000 test images: 93 %
+
+>Time taken: 1030.9331729412079s
