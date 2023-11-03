@@ -1,6 +1,8 @@
 # vgg-quantization-benchmark
 A benchmark for vgg and its quantization.
 
+## Install and run
+
 1. Finetune the Vgg on the Fash-Mnist for ten epoches,
 becase the Vgg is trained on the ImageNet, which is a large dataset. 
 The dataset and the original model will be downloaded automatically.
@@ -19,14 +21,15 @@ his method is too complicated.)~~
 3. Run benchmark on the both finetuned model and quantized model.
 
 ```bash
-  python main.py
+  python benchmark.py
 ```
 
 - Float Version  :
   - 520M
   - 32bit
   - runing at RTX3070Ti
-> Time cost on the float model: 41.86415243148804  s
+> - Time cost on the float model: 42 seconds on GPU
+> - Time cost on the float model: 840.63 seconds on CPU
 
 > Accuracy of the float model on the 10000 CIFAR-10 test images: 93.48%
 
@@ -36,4 +39,10 @@ his method is too complicated.)~~
   - runing at i9-12900H
 > Accuracy of the network on the 10000 test images: 93 %
 
->Time taken: 1030.9331729412079s
+>- Time taken: 1031 seconds on CPU  about times faster 
+> - GPU test is unavailable.
+
+
+## Benchmark visualization
+
+![./accuracy.png](./accuracy.png)
